@@ -6,8 +6,9 @@ const CountryDetail = ({country}) => {
       <div className="country-detail">
         The capital of {country.name.common} is 
         {country.capital} population is {country.population}, 
-        drives on {country.car.side} flag  
-        <img src={country.flags.png}/>
+        drives on {country.car.side} and the flag is  
+        
+        <img src={country.flags.png} width='80' height='45'/>
       </div>
     )
 }

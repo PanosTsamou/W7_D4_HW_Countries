@@ -4,7 +4,7 @@ const CountryOption = ({index, country}) =>{
 
 
     return (
-    <option value={index} >{country.name.common}</option>
+    <option value={index} >{country.name.common} {country.flag}</option>
     )
 }
 

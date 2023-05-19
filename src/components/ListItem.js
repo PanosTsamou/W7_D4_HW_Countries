@@ -1,14 +1,14 @@
 import React from 'react';
 import './ListItem.css';
 
-const ListItem = ({country, onCountryClicked}) => {
+const ListItem = ({country, borderCountries, removeFavCountry}) => {
 
   const handleClick = function() {
-    console.log(`Clicked on ${country.name.common}`)
-    onCountryClicked(country)
+    
+    removeFavCountry(country)
   }
 
-  return <li onClick={handleClick}>{country.name.common}</li>
+  return <li >{country.name.common} It borders with: {borderCountries ? borderCountries.map((country) => country.name.common).join(', ') : 'No countries found'}  <button onClick={handleClick}>Remove</button> </li>
 }
 
 export default ListItem;

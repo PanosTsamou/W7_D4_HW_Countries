@@ -12,9 +12,8 @@ const CountrySelect = ({countries, onCountrySelect}) => {
         })
 
         const handleChangeOptions = (event) =>{
-            console.log(event.target.value)
             const country = countries[event.target.value]
-            console.log(country.name.common)
+
             onCountrySelect(country)
         }
 
